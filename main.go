@@ -18,7 +18,7 @@ type Service struct {
 	blockByHash map[string]*Block
 }
 
-func (s Service) getLatestBlocks(previousBlocks []*Block) []*Block {
+func (s Service) GetLatestBlocks(previousBlocks []*Block) []*Block {
 	s.storeBlocks(previousBlocks)
 	s.downloadNewerBlocks()
 	h := s.getLongestChainsLatestHash()
